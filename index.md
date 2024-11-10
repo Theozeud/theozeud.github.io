@@ -13,3 +13,4 @@ I also belongs to the [MATHERIALS](https://team.inria.fr/matherials/) team of [I
 {% include_relative _includes/education.md %}
 {% include_relative _includes/teaching_experience.md %}
 {% include_relative _includes/academic_events.md %}
+{% include_relative _includes/contact.md %}
