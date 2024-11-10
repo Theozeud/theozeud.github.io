@@ -9,3 +9,7 @@ I am a first year PhD student under the supervision of [Éric Cancès](https://c
 My PhD is funded by the [CNRS](https://www.cnrs.fr/fr) (Centre national de la recherche scientifique) through the project [MaQuI](https://www.cnrs.fr/fr/projet-ri2/maqui) of the program ["Risky and High-Impact Research Program" (RI)](https://www.cnrs.fr/fr/actualite/la-recherche-du-risque). 
 
 I also belongs to the [MATHERIALS](https://team.inria.fr/matherials/) team of [Inria Paris](https://www.inria.fr/fr/centre-inria-de-paris).  
+
+{% include_relative _includes/education.md %}
+{% include_relative _includes/teaching_experience.md %}
+{% include_relative _includes/academic_events.md %}
