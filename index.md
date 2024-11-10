@@ -1,3 +1,7 @@
+---
+layout: homepage
+---
+
 # About me
 
 I am a first year PhD student under the supervision of [Éric Cancès](https://cermics.enpc.fr/~cances/) and [Mathieu Lewin](https://www.ceremade.dauphine.fr/~lewin/). I work on the development of a new     formulation, new approximations and new numerical methods for the Time Dependent Density-Functional Theory (TDDFT) for molecules and materials.
