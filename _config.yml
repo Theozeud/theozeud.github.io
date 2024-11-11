@@ -3,8 +3,9 @@ remote_theme: yaoyao-liu/minimal-light
 # Basic Information 
 title: Théo Duez
 position: Ph.D. Student
-affiliation: CNRS
+affiliation: CNRS, Inria, Cermics
 email: theo.duez@enpc.fr
+email_link: mailto:theo.duez@enpc.fr
 
 # Search Engine Optimization (SEO)
 # The following information is used to improve the website traffic from search engines, e.g., Google.
