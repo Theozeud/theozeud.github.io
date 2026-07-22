@@ -1,0 +1,57 @@
+# Add new entries in any order -- the page groups them by type into
+# sections: Summer School / Conference / Talk / Poster. Within each
+# section they're shown in the order listed here, so keep each group
+# most-recent-first.
+- title: Illustration of the Geometric Principle in TDDFT with a 1D Soft-Coulomb Model
+  type: Talk
+  date: Apr 2026
+  location: REGAL Workshop on the Foundations and Extensions of Density-Functional Theory, OsloMet, Oslo, Norway
+  link: /assets/files/Slides_Oslo.pdf
+  link_label: Slides
+
+- title: Constrained Schrödinger Dynamics and the Foundations of TDDFT
+  type: Talk
+  date: Mar 2026
+  location: 96th GAMM Annual Meeting, Stuttgart, Germany
+  link: /assets/files/Slides_Gamm.pdf
+  link_label: Slides
+
+- title: 'Accurate Ground State Computations of Atoms and Ions in Extended Kohn-Sham Theory'
+  type: Poster
+  date: Oct 2025
+  location: JuliaCon Local, CNAM, Paris
+  link: /assets/files/Poster_JuliaCon.pdf
+  link_label: Poster
+
+- title: Modern Wavefunction Based Methods in Electronic Structure Theory
+  type: Summer School
+  date: Sep 2025
+  location: University of Pisa, Italy
+  role: Attendee
+
+- title: 'Negative Atomic Ions In Extended Kohn-Sham Theory'
+  detail: Modern Wavefunction Based Methods in Electronic Structure Theory
+  type: Poster
+  date: Sep 2025
+  location: University of Pisa, Italy
+  link: /assets/files/Poster_Pisa.pdf
+  link_label: Poster
+
+- title: Manuel Conference
+  detail: Mathematical and Numerical Analysis of Electronic Structure Models
+  type: Conference
+  date: Sep 2024
+  location: Stuttgart, Germany
+  role: Attendee
+
+- title: 7th Mini-School on Mathematics for Theoretical Chemistry and Physics
+  type: Summer School
+  date: May 2024
+  location: Laboratoire Jacques-Louis Lions, Paris, France
+  role: Attendee
+
+- title: 6th Mini-School on Mathematics for Theoretical Chemistry and Physics
+  type: Summer School
+  date: May 2024
+  location: Laboratoire Jacques-Louis Lions, Paris, France
+  role: Attendee

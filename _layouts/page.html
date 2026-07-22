@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main class="page page--{{ page.slug }}">
+    <div class="page__header">
+      <h1 class="page__title">{{ page.title }}</h1>
+      {% if page.pdf_button and site.cv_pdf %}
+      <a class="button" href="{{ site.cv_pdf | relative_url }}">Download PDF</a>
+      {% endif %}
+    </div>
+    {% if page.subtitle %}<p class="page__subtitle">{{ page.subtitle }}</p>{% endif %}
+    {{ content }}
+  </main>
+  {% include footer.html %}
+</body>
+</html>

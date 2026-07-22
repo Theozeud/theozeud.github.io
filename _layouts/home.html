@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  {% include head.html %}
+</head>
+<body>
+  {% include nav.html %}
+  <main class="page page--home">
+    <div class="home-grid">
+      <aside class="home-sidebar">
+        <div class="home-sidebar__top">
+          {% if site.avatar %}
+          <img class="home-sidebar__photo" src="{{ site.avatar | relative_url }}" alt="Portrait of {{ site.title }}">
+          {% endif %}
+          <div class="home-sidebar__info">
+            <h1 class="home-sidebar__name">{{ site.title }}</h1>
+            {% if site.position %}<p class="home-sidebar__role">{{ site.position }}</p>{% endif %}
+            <p class="home-sidebar__affiliation">
+              {% if site.affiliation_link %}<a href="{{ site.affiliation_link }}">{{ site.affiliation }}</a>{% else %}{{ site.affiliation }}{% endif %}
+            </p>
+            {% if site.location %}<p class="home-sidebar__location">{{ site.location }}</p>{% endif %}
+            {% if site.email %}<p class="home-sidebar__email">{% include email.html %}</p>{% endif %}
+          </div>
+        </div>
+
+        {% if site.cv_pdf %}
+        <a class="button home-sidebar__cv" href="{{ site.cv_pdf | relative_url }}">Download CV</a>
+        {% endif %}
+
+        <div class="home-sidebar__social">
+          {% if site.google_scholar %}<a class="icon-link" href="{{ site.google_scholar }}" aria-label="Google Scholar">{% include icons.html name="scholar" px=20 %}</a>{% endif %}
+          {% if site.github_link %}<a class="icon-link" href="{{ site.github_link }}" aria-label="GitHub">{% include icons.html name="github" px=20 %}</a>{% endif %}
+          {% if site.linkedin %}<a class="icon-link" href="{{ site.linkedin }}" aria-label="LinkedIn">{% include icons.html name="linkedin" px=20 %}</a>{% endif %}
+        </div>
+      </aside>
+
+      <div class="home-content">
+        {{ content }}
+      </div>
+    </div>
+  </main>
+  {% include footer.html %}
+</body>
+</html>

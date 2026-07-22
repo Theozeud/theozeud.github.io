@@ -1,0 +1,17 @@
+# Add new entries at the top (most recent first).
+# links: any of arxiv / pdf / doi / code — omit ones that don't apply.
+- title: "Geometric Time-Dependent Density Functional Theory"
+  authors: "É. Cancès, T. Duez, J. van Gog, A. B. Lauritsen, M. Lewin, J. Toulouse"
+  venue: "Physical Review Letters 136, 256401"
+  year: 2026
+  links:
+    arxiv: https://arxiv.org/abs/2601.07724
+    doi: https://doi.org/10.1103/xtjx-r2lm
+
+- title: "Geometric Theory of Constrained Schrödinger Dynamics with Application to Time-Dependent Density-Functional Theory on a Finite Lattice"
+  authors: "É. Cancès, T. Duez, J. van Gog, A. B. Lauritsen, M. Lewin, J. Toulouse"
+  venue: "Physical Review A 113, 062222"
+  year: 2026
+  links:
+    arxiv: https://arxiv.org/abs/2601.07719
+    doi: https://doi.org/10.1103/w2bz-p8df

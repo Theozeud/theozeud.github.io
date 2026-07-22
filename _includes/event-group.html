@@ -1,0 +1,16 @@
+{% if include.items.size > 0 %}
+## {{ include.heading }}
+
+<div class="entries">
+  {% for event in include.items %}
+  <div class="entry">
+    <div class="entry__date">{{ event.date }}</div>
+    <div class="entry__body">
+      <p class="entry__title">{{ event.title }}</p>
+      {% if event.detail %}<p class="entry__sub">{{ event.detail }}</p>{% endif %}
+      <p class="entry__note">{{ event.location }}{% if event.role %} · {{ event.role }}{% endif %}{% if event.link %} · <a href="{{ event.link | relative_url }}">{{ event.link_label | default: "Link" }}</a>{% endif %}</p>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+{% endif %}

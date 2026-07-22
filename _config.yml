@@ -1,42 +1,51 @@
-remote_theme: yaoyao-liu/minimal-light
-
-# Basic Information 
 title: Théo Duez
 position: Ph.D. Student
-affiliation: CNRS, Inria, Cermics
+affiliation: CNRS · Inria · CERMICS
+affiliation_link: https://team.inria.fr/matherials/
 location: Paris, France
 email: theo.duez@enpc.fr
-email_link: mailto:theo.duez@enpc.fr
+
+# Address shown in the footer
+address:
+  - CERMICS, École des Ponts
+  - 6 & 8, av. Blaise Pascal, Cité Descartes
+  - 77455 Marne-la-Vallée Cedex 2, France
 
 # Search Engine Optimization (SEO)
-# The following information is used to improve the website traffic from search engines, e.g., Google.
-keywords: Théo Duez
-description: Personal website of Théo Duez
+keywords: Théo Duez, TDDFT, density functional theory, numerical analysis, applied mathematics, CNRS, Inria
+description: Personal academic website of Théo Duez, PhD student in applied mathematics.
 canonical: https://theozeud.github.io/
 
-# Links 
-#google_scholar: https://scholar.google.com/
-#cv_link: assets/files/curriculum_vitae.pdf
+# Links (leave blank to hide from the footer)
 github_link: https://github.com/Theozeud
 linkedin: https://www.linkedin.com/in/th%C3%A9o-duez-044a581bb/
+google_scholar:
 
-# Images (e.g., your profile picture and your website's favicon) 
-# "favicon" and "favicon_dark" are used for the light and dark modes, respectively. 
-avatar: ./assets/img/foto.jpg
-#favicon: ./assets/img/favicon.png
-#favicon_dark: ./assets/img/favicon-dark.png
+# Path to a CV PDF, shown as a "Download PDF" button on the home page and CV page.
+cv_pdf: /assets/files/cv.pdf
 
-# Footnote
-# You may use the option to disable the footnote, "Powered by Jekyll and Minimal Light theme."
-enable_footnote: false
+avatar: /assets/img/foto.jpg
 
-# Auto Dark Mode
-# You may use the option to disable the automatic dark theme
-auto_dark_mode: true
+# Top navigation, in order
+nav:
+  - title: Home
+    url: /
+  - title: CV
+    url: /cv/
+  - title: Teaching
+    url: /teaching/
+  - title: Publications
+    url: /publications/
+  - title: Events
+    url: /events/
 
-# Font
-# You can use this option to choose between Serif or Sans Serif fonts.
-font: "Serif" # or "Sans Serif"
+markdown: kramdown
+kramdown:
+  input: GFM
+sass:
+  style: compressed
 
 exclude:
   - README.md
+  - LICENSE
+  - CV
