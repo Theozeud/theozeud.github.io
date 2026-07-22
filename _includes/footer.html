@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <div class="site-footer__inner">
+    <div class="site-footer__block">
+      {% if site.address %}
+      <address>
+        {% for line in site.address %}{{ line }}{% unless forloop.last %}<br>{% endunless %}{% endfor %}
+      </address>
+      {% endif %}
+      {% if site.email %}<span class="email-obfuscated">{% include email.html %}</span>{% endif %}
+    </div>
+    <div class="site-footer__block site-footer__social">
+      {% if site.google_scholar %}<a class="icon-link" href="{{ site.google_scholar }}" aria-label="Google Scholar">{% include icons.html name="scholar" %}</a>{% endif %}
+      {% if site.github_link %}<a class="icon-link" href="{{ site.github_link }}" aria-label="GitHub">{% include icons.html name="github" %}</a>{% endif %}
+      {% if site.linkedin %}<a class="icon-link" href="{{ site.linkedin }}" aria-label="LinkedIn">{% include icons.html name="linkedin" %}</a>{% endif %}
+    </div>
+  </div>
+</footer>
