@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{etoolbox}
 \usepackage{microtype}
+\usepackage{needspace}
 \usepackage{XCharter} % serif face throughout -- classic academic look
 
 \setlength{\parindent}{0pt}
@@ -41,6 +42,10 @@
   [\vspace{-0.15em}{\color{cvrule}\titlerule[0.5pt]}]
 \titlespacing*{\section}{0pt}{1.4em}{0.8em}
 
+% \cvsection{title}: never leave a section heading stranded at the bottom of
+% a page -- if the heading and its first entries don't fit, start a new page.
+\newcommand{\cvsection}[1]{\Needspace{12\baselineskip}\section*{#1}}
+
 % -------------------------------
 % Entry geometry: a fixed date column on the left, indented body on the
 % right -- the classic academic-CV layout. Everything lines up on the
@@ -71,14 +76,14 @@
 % -------------------------------
 % Section environments (each just opens/closes a \section*)
 % -------------------------------
-\newenvironment{education}{\section*{Education}}{}
-\newenvironment{awards}{\section*{Awards}}{}
-\newenvironment{workexperience}{\section*{Research Experience}}{}
-\newenvironment{teaching}{\section*{Teaching Experience}}{}
-\newenvironment{summer}{\section*{Schools}}{}
-\newenvironment{talks}{\section*{Talks}}{}
-\newenvironment{posters}{\section*{Posters}}{}
-\newenvironment{conferences}{\section*{Conferences Attended}}{}
+\newenvironment{education}{\cvsection{Education}}{}
+\newenvironment{awards}{\cvsection{Awards}}{}
+\newenvironment{workexperience}{\cvsection{Research Experience}}{}
+\newenvironment{teaching}{\cvsection{Teaching Experience}}{}
+\newenvironment{summer}{\cvsection{Schools}}{}
+\newenvironment{talks}{\cvsection{Talks}}{}
+\newenvironment{posters}{\cvsection{Posters}}{}
+\newenvironment{conferences}{\cvsection{Conferences Attended}}{}
 
 % degreee: date, title, institution (no extra line)
 \newcommand{\degreee}[3]{\cventry{#2}{#1}{#3}{}}
@@ -103,7 +108,7 @@
 % -------------------------------
 % Publications
 % -------------------------------
-\newenvironment{publications}{\section*{Publications}}{}
+\newenvironment{publications}{\cvsection{Publications}}{}
 
 % paper: year, title, authors, venue, arXiv id
 \newcommand{\paper}[5]{\cventry{#2}{#1}{#3}{#4 --- \href{https://arxiv.org/abs/#5}{arXiv:#5}}}
@@ -281,13 +286,13 @@
 \end{conferences}
 
 % -------------------------------
-\section*{Skills}
+\cvsection{Skills}
 
 \cvskill{Software}{Julia, Git, C++, Python, MATLAB, LaTeX, Linux}
 \cvskill{Languages}{French (native), English (C1), German (B1)}
 
 % -------------------------------
-\section*{Interests}
+\cvsection{Interests}
 
 \cvskill{Sports}{Running, Trail Running, Mountain Sports}
 
