@@ -1,5 +1,12 @@
 # Add new entries at the top (most recent first).
 # links: any of arxiv / pdf / doi / code — omit ones that don't apply.
+- title: "V-Representability Beyond Singular Times in Time-Dependent Density Functional Theory: The Hubbard Dimer Case"
+  authors: "É. Cancès, T. Duez"
+  venue: "Preprint"
+  year: 2026
+  links:
+    arxiv: https://arxiv.org/abs/2610.33837
+
 - title: "Geometric Time-Dependent Density Functional Theory"
   authors: "É. Cancès, T. Duez, J. van Gog, A. B. Lauritsen, M. Lewin, J. Toulouse"
   venue: "Physical Review Letters 136, 256401"

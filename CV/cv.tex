@@ -8,6 +8,7 @@
 \usepackage{hyperref}
 \usepackage{etoolbox}
 \usepackage{microtype}
+\usepackage{needspace}
 \usepackage{XCharter} % serif face throughout -- classic academic look
 
 \setlength{\parindent}{0pt}
@@ -41,6 +42,10 @@
   [\vspace{-0.15em}{\color{cvrule}\titlerule[0.5pt]}]
 \titlespacing*{\section}{0pt}{1.4em}{0.8em}
 
+% \cvsection{title}: never leave a section heading stranded at the bottom of
+% a page -- if the heading and its first entries don't fit, start a new page.
+\newcommand{\cvsection}[1]{\Needspace{12\baselineskip}\section*{#1}}
+
 % -------------------------------
 % Entry geometry: a fixed date column on the left, indented body on the
 % right -- the classic academic-CV layout. Everything lines up on the
@@ -71,14 +76,14 @@
 % -------------------------------
 % Section environments (each just opens/closes a \section*)
 % -------------------------------
-\newenvironment{education}{\section*{Education}}{}
-\newenvironment{awards}{\section*{Awards}}{}
-\newenvironment{workexperience}{\section*{Work Experience}}{}
-\newenvironment{teaching}{\section*{Teaching Experience}}{}
-\newenvironment{summer}{\section*{Summer Schools}}{}
-\newenvironment{talks}{\section*{Talks}}{}
-\newenvironment{posters}{\section*{Posters}}{}
-\newenvironment{conferences}{\section*{Conferences Attended}}{}
+\newenvironment{education}{\cvsection{Education}}{}
+\newenvironment{awards}{\cvsection{Awards}}{}
+\newenvironment{workexperience}{\cvsection{Research Experience}}{}
+\newenvironment{teaching}{\cvsection{Teaching Experience}}{}
+\newenvironment{summer}{\cvsection{Schools}}{}
+\newenvironment{talks}{\cvsection{Talks}}{}
+\newenvironment{posters}{\cvsection{Posters}}{}
+\newenvironment{conferences}{\cvsection{Conferences Attended}}{}
 
 % degreee: date, title, institution (no extra line)
 \newcommand{\degreee}[3]{\cventry{#2}{#1}{#3}{}}
@@ -103,7 +108,7 @@
 % -------------------------------
 % Publications
 % -------------------------------
-\newenvironment{publications}{\section*{Publications}}{}
+\newenvironment{publications}{\cvsection{Publications}}{}
 
 % paper: year, title, authors, venue, arXiv id
 \newcommand{\paper}[5]{\cventry{#2}{#1}{#3}{#4 --- \href{https://arxiv.org/abs/#5}{arXiv:#5}}}
@@ -137,9 +142,9 @@
 % -------------------------------
 \begin{education}
 
-\degreeee{Oct 2024--Sep 2027}{PhD in Applied Mathematics for Quantum Chemistry}{CNRS - Cermics École Nationale des Ponts et Chaussés, Champs-Sur-Marne France}{Supervisors: Éric Cancès and Mathieu Lewin}
+\degreeee{Oct 2024--Sep 2027}{PhD in Applied Mathematics for Quantum Chemistry}{CNRS -- CERMICS, École Nationale des Ponts et Chaussées, Champs-sur-Marne, France}{Thesis: New formulations, approximations and numerical methods for Time-Dependent Density Functional Theory (TDDFT)\\[3pt]Supervisors: Éric Cancès and Mathieu Lewin}
 
-\degreeee{Sep 2020 -- Sep 2024}{Master of Science (Diplôme d'Ingénieur), Mathematics specialization}{CentraleSupélec - Gif-sur-Yvette}{Includes a gap year (Sep 2022 -- Sep 2023) for research internships at CEA Paris-Saclay and the Max Planck Institute -- see Work Experience}
+\degreeee{Sep 2020 -- Sep 2024}{Master of Science (Diplôme d'Ingénieur), Mathematics specialization}{CentraleSupélec - Gif-sur-Yvette}{Includes a gap year (Sep 2022 -- Sep 2023) for research internships at CEA Paris-Saclay and the Max Planck Institute -- see Research Experience}
 
 \degreeee{Sep 2023 -- Sep 2024}{Master 2 (M2), Analysis, Modelling and Simulation (AMS)}{Université Paris-Saclay}{Completed concurrently with the final year at CentraleSupélec}
 
@@ -152,14 +157,22 @@
 \end{education}
 
 % -------------------------------
-\begin{awards}
+\begin{workexperience}
 
-\award{2023}{Sophie Germain Excellence Scholarship}{Fondation Mathématique Jacques Hadamard (FMJH)}{Awarded for the Master's program in Mathematics and Applications, Université Paris-Saclay / Institut Polytechnique de Paris}
+\position{Apr 2024 -- Aug 2024}{Research Intern}{Inria Paris \& CERMICS, Champs-sur-Marne, France}{Éric Cancès}
 
-\end{awards}
+\position{Apr 2023 -- Aug 2023}{Research Intern}{Max Planck Institute, Numerical Methods for Plasma Physics department, Munich, Germany}{Michael Kraus}
+
+\position{Nov 2022 -- Mar 2023}{Research Intern}{CEA Paris-Saclay, Thermohydraulics and Fluid Mechanics team (STMF/LMSF), Saclay, France}{Alain Cartalade}
+
+\position{Nov 2020 -- May 2022}{Research Training}{CentraleSupélec, Gif-sur-Yvette, France}{Ludovic Goudenège}
+
+\end{workexperience}
 
 % -------------------------------
 \begin{publications}
+
+\paper{2026}{V-Representability Beyond Singular Times in Time-Dependent Density Functional Theory: The Hubbard Dimer Case}{É. Cancès, T. Duez}{Preprint}{2610.33837}
 
 \paper{2026}{Geometric Time-Dependent Density Functional Theory}{É. Cancès, T. Duez, J. van Gog, A. B. Lauritsen, M. Lewin, J. Toulouse}{Physical Review Letters 136, 256401}{2601.07724}
 
@@ -168,17 +181,24 @@
 \end{publications}
 
 % -------------------------------
-\begin{workexperience}
+\begin{talks}
 
-\position{Apr 2024 -- Aug 2024}{Research Intern}{Inria Paris \& Cermics, Champs-sur-Marne, France}{Éric Cancès}
+\talk{Nov 2026\\(upcoming)}{V-Representability Beyond Singular Times in Time-Dependent Density Functional Theory: The Hubbard Dimer Case}{MOANSI International Workshop 2026 - Laboratoire Jacques-Louis Lions, Sorbonne Université, Paris, France}
 
-\position{Apr 2023 -- Aug 2023}{Research Intern}{Max-Planck Institute, Numerical Method for Plasma Physic department, Munich, Germany}{Michael Kraus}
+\talk{Apr 2026}{Illustration of the Geometric Principle in TDDFT with a 1D Soft-Coulomb Model}{REGAL Workshop on the Foundations and Extensions of Density-Functional Theory - OsloMet, Oslo, Norway}
 
-\position{Nov 2022 -- Mar 2023}{Research Intern}{CEA Paris-Saclay, thermohydraulic and fluid mechanics team (STMF/LMSF), Saclay, France}{Alain Cartalade}
+\talk{Mar 2026}{Constrained Schrödinger Dynamics and the Foundations of TDDFT}{96th GAMM Annual Meeting - Stuttgart, Germany}
 
-\position{Nov 2020 -- May 2022}{Research Training}{CentraleSupélec, Gif-sur-Yvette, France}{Ludovic Goudenège}
+\end{talks}
 
-\end{workexperience}
+% -------------------------------
+\begin{posters}
+
+\poster{Oct 2025}{Accurate Ground State Computations of Atoms and Ions in Extended Kohn-Sham Theory}{JuliaCon Local - CNAM, Paris}
+
+\poster{Sep 2025}{Negative Atomic Ions In Extended Kohn-Sham Theory}{Modern Wavefunction Based Methods in Electronic Structure Theory - University of Pisa, Italy}
+
+\end{posters}
 
 % -------------------------------
 \begin{teaching}
@@ -186,41 +206,41 @@
 \course
   {Apr 2026 -- May 2026}
   {Partial Differential Equations: Variational Approaches}
-  {École Nationale des Ponts et Chaussés}
+  {École Nationale des Ponts et Chaussées}
   {Undergraduate Year 3}{Lecture + Tutorials 12h}
   {Frédéric Legoll}
 
 \course
   {Jan 2026 -- Apr 2026}
   {Analyse des EDPs (Distributions, Fourier Analysis, $L^p$ Spaces)}
-  {École Nationale des Ponts et Chaussés}
+  {École Nationale des Ponts et Chaussées}
   {Undergraduate Year 3}{Lecture + Tutorials 21h}
   {Virginie Ehrlacher}
 
 \course
   {Sep 2025 -- Oct 2025}
   {Modeling with partial differential equations}
-  {École Nationale des Ponts et Chaussés}
-  {Undergraduate Year 3}{Tutorials 7,5h}
+  {École Nationale des Ponts et Chaussées}
+  {Undergraduate Year 3}{Tutorials 7.5h}
   {Tony Lelièvre}
 
 \course
   {Apr 2025 -- May 2025}
-  {Partial Differential equations: Variational approaches}
-  {École Nationale des Ponts et Chaussés}
+  {Partial Differential Equations: Variational Approaches}
+  {École Nationale des Ponts et Chaussées}
   {Undergraduate Year 3}{Lecture + Tutorials 18h}
   {Frédéric Legoll}
 
 \coursee
   {Jan 2025 -- May 2025}
   {Supervision of a project of students}
-  {École Nationale des Ponts et Chaussés}
+  {École Nationale des Ponts et Chaussées}
   {Undergraduate Year 3}{Supervision 12h}
 
 \course
   {Sep 2024 -- Nov 2024}
   {Analyse des EDPs}
-  {École Nationale des Ponts et Chaussés}
+  {École Nationale des Ponts et Chaussées}
   {Undergraduate Year 3}{Lecture + Tutorials 20h}
   {Virginie Ehrlacher --- Substitute teacher}
 
@@ -239,33 +259,24 @@
 \end{teaching}
 
 % -------------------------------
+\begin{awards}
+
+\award{2023}{Sophie Germain Excellence Scholarship}{Fondation Mathématique Jacques Hadamard (FMJH)}{Awarded for the Master's program in Mathematics and Applications, Université Paris-Saclay / Institut Polytechnique de Paris}
+
+\end{awards}
+
+% -------------------------------
 \begin{summer}
 
-\school{Sep 2025}{Modern Wavefunction Based Methods in Electronic Structure Theory}{University of Pisa - Pisa, Italia}
+\school{Nov 2026\\(upcoming)}{Oberwolfach Seminar: Numerics for Evolutionary PDEs -- From Nonlinear Parametrizations to Time Integration}{Mathematisches Forschungsinstitut Oberwolfach, Germany}
 
-\school{May 2024}{7th edition of the Mini-School Summer School for theoretical chemistry and physics}{Laboratoire Jacques-Louis Lions - Paris, France}
+\school{Sep 2025}{Modern Wavefunction Based Methods in Electronic Structure Theory}{University of Pisa - Pisa, Italy}
 
-\school{May 2024}{6th edition of the Mini-School Summer School for theoretical chemistry and physics}{Laboratoire Jacques-Louis Lions - Paris, France}
+\school{May 2025}{7th Mini-School on Mathematics for Theoretical Chemistry and Physics}{Laboratoire Jacques-Louis Lions - Paris, France}
+
+\school{May 2024}{6th Mini-School on Mathematics for Theoretical Chemistry and Physics}{Laboratoire Jacques-Louis Lions - Paris, France}
 
 \end{summer}
-
-% -------------------------------
-\begin{talks}
-
-\talk{Apr 2026}{Illustration of the Geometric Principle in TDDFT with a 1D Soft-Coulomb Model}{REGAL Workshop on the Foundations and Extensions of Density-Functional Theory - OsloMet, Oslo, Norway}
-
-\talk{Mar 2026}{Constrained Schrödinger Dynamics and the Foundations of TDDFT}{96th GAMM Annual Meeting - Stuttgart, Germany}
-
-\end{talks}
-
-% -------------------------------
-\begin{posters}
-
-\poster{Oct 2025}{Accurate Ground State Computations of Atoms and Ions in Extended Kohn-Sham Theory}{JuliaCon Local - CNAM, Paris}
-
-\poster{Sep 2025}{Negative Atomic Ions In Extended Kohn-Sham Theory}{Modern Wavefunction Based Methods in Electronic Structure Theory - University of Pisa, Italia}
-
-\end{posters}
 
 % -------------------------------
 \begin{conferences}
@@ -275,13 +286,13 @@
 \end{conferences}
 
 % -------------------------------
-\section*{Skills}
+\cvsection{Skills}
 
 \cvskill{Software}{Julia, Git, C++, Python, MATLAB, LaTeX, Linux}
 \cvskill{Languages}{French (native), English (C1), German (B1)}
 
 % -------------------------------
-\section*{Interests}
+\cvsection{Interests}
 
 \cvskill{Sports}{Running, Trail Running, Mountain Sports}
 

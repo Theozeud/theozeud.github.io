@@ -14,6 +14,7 @@ pdf_button: true
     <div class="entry__body">
       <p class="entry__title">PhD in Applied Mathematics for Quantum Chemistry</p>
       <p class="entry__sub">CNRS – CERMICS, École Nationale des Ponts et Chaussées, Champs-sur-Marne, France</p>
+      <p class="entry__note">Thesis: New formulations, approximations and numerical methods for Time-Dependent Density Functional Theory (TDDFT)</p>
       <p class="entry__note">Supervisors: Éric Cancès and Mathieu Lewin</p>
     </div>
   </div>
@@ -22,7 +23,7 @@ pdf_button: true
     <div class="entry__body">
       <p class="entry__title">Master of Science (Diplôme d'Ingénieur), Mathematics specialization</p>
       <p class="entry__sub">CentraleSupélec, Gif-sur-Yvette</p>
-      <p class="entry__note">Includes a gap year (Sep 2022 – Sep 2023) for research internships at CEA Paris-Saclay and the Max Planck Institute — see Work Experience</p>
+      <p class="entry__note">Includes a gap year (Sep 2022 – Sep 2023) for research internships at CEA Paris-Saclay and the Max Planck Institute — see Research Experience</p>
     </div>
   </div>
   <div class="entry">
@@ -58,20 +59,7 @@ pdf_button: true
   </div>
 </div>
 
-## Awards
-
-<div class="entries">
-  <div class="entry">
-    <div class="entry__date">2023</div>
-    <div class="entry__body">
-      <p class="entry__title">Sophie Germain Excellence Scholarship</p>
-      <p class="entry__sub">Fondation Mathématique Jacques Hadamard (FMJH)</p>
-      <p class="entry__note">Awarded for the Master's program in Mathematics and Applications, Université Paris-Saclay / Institut Polytechnique de Paris</p>
-    </div>
-  </div>
-</div>
-
-## Work Experience
+## Research Experience
 
 <div class="entries">
   <div class="entry">
@@ -104,6 +92,19 @@ pdf_button: true
       <p class="entry__title">Research Training</p>
       <p class="entry__sub">CentraleSupélec, Gif-sur-Yvette, France</p>
       <p class="entry__note">Supervisor: Ludovic Goudenège</p>
+    </div>
+  </div>
+</div>
+
+## Awards
+
+<div class="entries">
+  <div class="entry">
+    <div class="entry__date">2023</div>
+    <div class="entry__body">
+      <p class="entry__title">Sophie Germain Excellence Scholarship</p>
+      <p class="entry__sub">Fondation Mathématique Jacques Hadamard (FMJH)</p>
+      <p class="entry__note">Awarded for the Master's program in Mathematics and Applications, Université Paris-Saclay / Institut Polytechnique de Paris</p>
     </div>
   </div>
 </div>

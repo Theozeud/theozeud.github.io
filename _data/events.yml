@@ -1,7 +1,20 @@
 # Add new entries in any order -- the page groups them by type into
-# sections: Summer School / Conference / Talk / Poster. Within each
+# sections: School / Conference / Talk / Poster. Within each
 # section they're shown in the order listed here, so keep each group
 # most-recent-first.
+- title: 'Oberwolfach Seminar: Numerics for Evolutionary PDEs'
+  detail: From Nonlinear Parametrizations to Time Integration
+  type: School
+  date: Nov 2026
+  location: Mathematisches Forschungsinstitut Oberwolfach, Germany
+  role: Upcoming
+
+- title: 'V-Representability Beyond Singular Times in Time-Dependent Density Functional Theory: The Hubbard Dimer Case'
+  type: Talk
+  date: Nov 2026
+  location: MOANSI International Workshop 2026, Laboratoire Jacques-Louis Lions, Sorbonne Université, Paris, France
+  role: Upcoming
+
 - title: Illustration of the Geometric Principle in TDDFT with a 1D Soft-Coulomb Model
   type: Talk
   date: Apr 2026
@@ -24,7 +37,7 @@
   link_label: Poster
 
 - title: Modern Wavefunction Based Methods in Electronic Structure Theory
-  type: Summer School
+  type: School
   date: Sep 2025
   location: University of Pisa, Italy
   role: Attendee
@@ -45,13 +58,13 @@
   role: Attendee
 
 - title: 7th Mini-School on Mathematics for Theoretical Chemistry and Physics
-  type: Summer School
-  date: May 2024
+  type: School
+  date: May 2025
   location: Laboratoire Jacques-Louis Lions, Paris, France
   role: Attendee
 
 - title: 6th Mini-School on Mathematics for Theoretical Chemistry and Physics
-  type: Summer School
+  type: School
   date: May 2024
   location: Laboratoire Jacques-Louis Lions, Paris, France
   role: Attendee
