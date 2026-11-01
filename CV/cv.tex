@@ -1,7 +1,7 @@
 \documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage[margin=2.4cm]{geometry}
+\usepackage[hmargin=2.2cm,vmargin=2cm]{geometry}
 \usepackage[english]{babel}
 \usepackage{titlesec}
 \usepackage{xcolor}
@@ -15,12 +15,13 @@
 \linespread{1.03}
 
 % -------------------------------
-% Palette: neutral paper + soft, muted accent
+% Palette: cool neutral grays + a muted slate blue accent
 % -------------------------------
-\definecolor{cvaccent}{HTML}{4B6A66} % soft, muted teal-gray
-\definecolor{cvgray}{HTML}{6B7280}   % neutral slate for dates/notes
-\definecolor{cvrule}{HTML}{DCDFDC}   % faint rule
-\definecolor{cvtext}{HTML}{242526}   % soft black body text
+\definecolor{cvaccent}{HTML}{2C4A6E} % muted slate blue
+\definecolor{cvsub}{HTML}{3E4A59}    % blue-gray for institutions
+\definecolor{cvgray}{HTML}{6A7684}   % cool gray for dates/notes
+\definecolor{cvrule}{HTML}{D3DBE5}   % faint blue-gray rule
+\definecolor{cvtext}{HTML}{1F2630}   % soft near-black body text
 \color{cvtext}
 
 \hypersetup{
@@ -37,38 +38,41 @@
 % crowd the descenders.
 % -------------------------------
 \titleformat{\section}
-  {\color{cvaccent}\bfseries\scshape\large}
-  {}{0em}{}
-  [\vspace{-0.15em}{\color{cvrule}\titlerule[0.5pt]}]
+  {\color{cvaccent}\scshape\large}
+  {}{0em}{\textls[60]}
+  [\vspace{-0.1em}{\color{cvrule}\titlerule[0.6pt]}]
 \titlespacing*{\section}{0pt}{1.4em}{0.8em}
 
 % \cvsection{title}: never leave a section heading stranded at the bottom of
-% a page -- if the heading and its first entries don't fit, start a new page.
-\newcommand{\cvsection}[1]{\Needspace{12\baselineskip}\section*{#1}}
+% a page -- if the heading and its first entry don't fit, start a new page.
+\newcommand{\cvsection}[1]{\Needspace{7\baselineskip}\section*{#1}}
 
 % -------------------------------
 % Entry geometry: a fixed date column on the left, indented body on the
 % right -- the classic academic-CV layout. Everything lines up on the
 % same left edge, which is what makes it easy to scan.
 % -------------------------------
-\newlength{\cvdatew}\setlength{\cvdatew}{3.1cm}
-\newlength{\cvgap}\setlength{\cvgap}{0.5cm}
-\newlength{\cvbodyw}\setlength{\cvbodyw}{\dimexpr\linewidth-\cvdatew-\cvgap\relax}
+\newlength{\cvdatew}\setlength{\cvdatew}{3.2cm}
+\newlength{\cvgap}\setlength{\cvgap}{0.6cm}
+% geometry only sets the text width at \begin{document}, so compute the
+% body column there -- otherwise it is sized from the class default.
+\newlength{\cvbodyw}
+\AtBeginDocument{\setlength{\cvbodyw}{\dimexpr\textwidth-\cvdatew-\cvgap\relax}}
 
 % \cventry{title}{date}{sub-line}{note-line} (sub/note may be empty)
 \newcommand{\cventry}[4]{%
-  \noindent\begin{minipage}[t]{\cvdatew}\raggedleft\small\color{cvgray}#2\end{minipage}%
+  \noindent\begin{minipage}[t]{\cvdatew}\leavevmode\raggedleft\small\color{cvgray}#2\end{minipage}%
   \hspace{\cvgap}%
   \begin{minipage}[t]{\cvbodyw}\raggedright
     \textbf{#1}%
-    \ifstrempty{#3}{}{\\[3pt]{\itshape\color{black!70}#3}}%
-    \ifstrempty{#4}{}{\\[3pt]{\small\color{cvgray}#4}}%
-  \end{minipage}\par\vspace{0.85em}%
+    \ifstrempty{#3}{}{\\[2pt]{\itshape\color{cvsub}#3}}%
+    \ifstrempty{#4}{}{\\[2pt]{\small\color{cvgray}#4}}%
+  \end{minipage}\par\vspace{0.65em}%
 }
 
 % \cvskill{label}{content} -- same left column, used for the Skills block
 \newcommand{\cvskill}[2]{%
-  \noindent\begin{minipage}[t]{\cvdatew}\raggedleft\small\scshape\color{cvgray}#1\end{minipage}%
+  \noindent\begin{minipage}[t]{\cvdatew}\leavevmode\raggedleft\small\scshape\color{cvgray}#1\end{minipage}%
   \hspace{\cvgap}%
   \begin{minipage}[t]{\cvbodyw}\raggedright #2\end{minipage}\par\vspace{0.45em}%
 }
@@ -118,12 +122,12 @@
 % -------------------------------
 \newcommand{\headerinfo}[4]{%
   \begin{center}
-    {\scshape\fontsize{20}{22}\selectfont\textls[40]{#1}}\\[0.5em]
-    {\small #2 \quad\textperiodcentered\quad #3}\\[0.3em]
+    {\color{cvaccent}\scshape\fontsize{22}{26}\selectfont\textls[50]{#1}}\\[0.6em]
+    {\small #2 \quad{\color{cvrule}|}\quad #3}\\[0.35em]
     {\small\itshape\color{cvgray} #4}
   \end{center}
-  \vspace{0.5em}
-  \noindent{\color{cvaccent}\rule{\linewidth}{0.6pt}}
+  \vspace{0.4em}
+  \noindent{\color{cvaccent}\rule{\linewidth}{0.8pt}}
   \vspace{0.2em}
 }
 
@@ -142,7 +146,7 @@
 % -------------------------------
 \begin{education}
 
-\degreeee{Oct 2024--Sep 2027}{PhD in Applied Mathematics for Quantum Chemistry}{CNRS -- CERMICS, École Nationale des Ponts et Chaussées, Champs-sur-Marne, France}{Thesis: New formulations, approximations and numerical methods for Time-Dependent Density Functional Theory (TDDFT)\\[3pt]Supervisors: Éric Cancès and Mathieu Lewin}
+\degreeee{Oct 2024 -- Sep 2027}{PhD in Applied Mathematics for Quantum Chemistry}{CNRS -- CERMICS, École Nationale des Ponts et Chaussées, Champs-sur-Marne, France}{Thesis: New formulations, approximations and numerical methods for Time-Dependent Density Functional Theory (TDDFT)\\[3pt]Supervisors: Éric Cancès and Mathieu Lewin}
 
 \degreeee{Sep 2020 -- Sep 2024}{Master of Science (Diplôme d'Ingénieur), Mathematics specialization}{CentraleSupélec - Gif-sur-Yvette}{Includes a gap year (Sep 2022 -- Sep 2023) for research internships at CEA Paris-Saclay and the Max Planck Institute -- see Research Experience}
 
@@ -204,57 +208,64 @@
 \begin{teaching}
 
 \course
+  {Sep 2026 -- Oct 2026}
+  {Modeling with partial differential equations}
+  {École Nationale des Ponts et Chaussées}
+  {Undergraduate Year 3}{Tutorials~10.5h}
+  {Tony Lelièvre}
+
+\course
   {Apr 2026 -- May 2026}
   {Partial Differential Equations: Variational Approaches}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Lecture + Tutorials 12h}
+  {Undergraduate Year 3}{Lecture + Tutorials~12h}
   {Frédéric Legoll}
 
 \course
   {Jan 2026 -- Apr 2026}
   {Analyse des EDPs (Distributions, Fourier Analysis, $L^p$ Spaces)}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Lecture + Tutorials 21h}
+  {Undergraduate Year 3}{Lecture + Tutorials~21h}
   {Virginie Ehrlacher}
 
 \course
   {Sep 2025 -- Oct 2025}
   {Modeling with partial differential equations}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Tutorials 7.5h}
+  {Undergraduate Year 3}{Tutorials~7.5h}
   {Tony Lelièvre}
 
 \course
   {Apr 2025 -- May 2025}
   {Partial Differential Equations: Variational Approaches}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Lecture + Tutorials 18h}
+  {Undergraduate Year 3}{Lecture + Tutorials~18h}
   {Frédéric Legoll}
 
 \coursee
   {Jan 2025 -- May 2025}
   {Supervision of a project of students}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Supervision 12h}
+  {Undergraduate Year 3}{Supervision~12h}
 
 \course
   {Sep 2024 -- Nov 2024}
   {Analyse des EDPs}
   {École Nationale des Ponts et Chaussées}
-  {Undergraduate Year 3}{Lecture + Tutorials 20h}
+  {Undergraduate Year 3}{Lecture + Tutorials~20h}
   {Virginie Ehrlacher --- Substitute teacher}
 
 \coursee
   {Sep 2021 -- Apr 2022}
   {Convergence, Integration, Probability and PDEs}
   {CentraleSupélec}
-  {Undergraduate Year 3}{Tutorials 20h}
+  {Undergraduate Year 3}{Tutorials~20h}
 
 \coursee
   {Jul 2021}
   {Teacher for the Summer School in Mathematics}
   {CentraleSupélec}
-  {Undergraduate Year 2}{Tutorials 18h}
+  {Undergraduate Year 2}{Tutorials~18h}
 
 \end{teaching}
 
