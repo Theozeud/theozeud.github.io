@@ -19,7 +19,7 @@ canonical: https://theozeud.github.io/
 # Links (leave blank to hide from the footer)
 github_link: https://github.com/Theozeud
 linkedin: https://www.linkedin.com/in/th%C3%A9o-duez-044a581bb/
-google_scholar:
+google_scholar: https://scholar.google.com/citations?user=xYpn_34AAAAJ
 
 # Path to a CV PDF, shown as a "Download PDF" button on the home page and CV page.
 cv_pdf: /assets/files/cv.pdf
