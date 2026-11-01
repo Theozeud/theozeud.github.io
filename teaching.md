@@ -7,6 +7,15 @@ permalink: /teaching/
 
 <div class="entries">
   <div class="entry">
+    <div class="entry__date">Sep 2026 –<br>Oct 2026</div>
+    <div class="entry__body">
+      <p class="entry__title">Modeling with partial differential equations</p>
+      <p class="entry__sub">École Nationale des Ponts et Chaussées — Undergraduate Year 3</p>
+      <p class="entry__note">Tutorials 10.5h</p>
+      <p class="entry__note">Reference professor: Tony Lelièvre</p>
+    </div>
+  </div>
+  <div class="entry">
     <div class="entry__date">Apr 2026 –<br>May 2026</div>
     <div class="entry__body">
       <p class="entry__title">Partial Differential Equations: Variational Approaches</p>
