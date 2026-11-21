@@ -41,11 +41,11 @@
   {\color{cvaccent}\scshape\large}
   {}{0em}{\textls[60]}
   [\vspace{-0.1em}{\color{cvrule}\titlerule[0.6pt]}]
-\titlespacing*{\section}{0pt}{1.4em}{0.8em}
+\titlespacing*{\section}{0pt}{1.25em}{0.75em}
 
 % \cvsection{title}: never leave a section heading stranded at the bottom of
 % a page -- if the heading and its first entry don't fit, start a new page.
-\newcommand{\cvsection}[1]{\Needspace{7\baselineskip}\section*{#1}}
+\newcommand{\cvsection}[1]{\Needspace{6\baselineskip}\section*{#1}}
 
 % -------------------------------
 % Entry geometry: a fixed date column on the left, indented body on the
@@ -67,7 +67,7 @@
     \textbf{#1}%
     \ifstrempty{#3}{}{\\[2pt]{\itshape\color{cvsub}#3}}%
     \ifstrempty{#4}{}{\\[2pt]{\small\color{cvgray}#4}}%
-  \end{minipage}\par\vspace{0.65em}%
+  \end{minipage}\par\vspace{0.55em}%
 }
 
 % \cvskill{label}{content} -- same left column, used for the Skills block
@@ -175,6 +175,8 @@
 
 % -------------------------------
 \begin{publications}
+
+\paper{2026}{Variational and Geometric Time-Dependent Density-Functional Theory of Electronic Systems}{É. Cancès, T. Duez, J. van Gog, A. B. Lauritsen, M. Lewin, J. Oldenburg, J. Toulouse}{Preprint}{2611.21431}
 
 \paper{2026}{V-Representability Beyond Singular Times in Time-Dependent Density Functional Theory: The Hubbard Dimer Case}{É. Cancès, T. Duez}{Preprint}{2610.33837}
 
